@@ -1,0 +1,45 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Mobyyy",
+  "email": "mobyyy@example.com",
+  "password": "123456"
+}
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "mobyyy@example.com",
+  "password": "123456"
+}
+###
+POST http://localhost:5000/api/groups/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTg0YzRkMzdiZWJlN2I4MDYzMzEyMzAiLCJpYXQiOjE3NzAzMDkwMTMsImV4cCI6MTc3MDMxMjYxM30.mnUtkdyZTwGFS93VEjVq2MVlq2fNeXxoddvhLENvyK4
+Content-Type: application/json
+
+{
+  "name": "Friends Dinner"
+}
+###
+GET http://localhost:5000/api/groups/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTg0YzRkMzdiZWJlN2I4MDYzMzEyMzAiLCJpYXQiOjE3NzAzMDkwMTMsImV4cCI6MTc3MDMxMjYxM30.mnUtkdyZTwGFS93VEjVq2MVlq2fNeXxoddvhLENvyK4
+###
+POST http://localhost:5000/api/expenses/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTg0YzRkMzdiZWJlN2I4MDYzMzEyMzAiLCJpYXQiOjE3NzAzMjE5NTcsImV4cCI6MTc3MDMyNTU1N30.4BUE8-eBbHubmSn1Ho5OhQjIcJuv5lxiCMQU2X7JsCA
+Content-Type: application/json
+
+{
+  "groupId": "6984c5d77bebe7b806331231",
+  "description": "Dinner at restaurant",
+  "amount": 150,
+  "splitWith": ["6984c4d37bebe7b806331230"]
+}
+###
+GET http://localhost:5000/api/expenses/6984c5d77bebe7b806331231
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTg0YzRkMzdiZWJlN2I4MDYzMzEyMzAiLCJpYXQiOjE3NzAzMDkwMTMsImV4cCI6MTc3MDMxMjYxM30.mnUtkdyZTwGFS93VEjVq2MVlq2fNeXxoddvhLENvyK4
+###
+DELETE http://localhost:5000/api/expenses/6984f84bcadda70a2b6cf138
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTg0YzRkMzdiZWJlN2I4MDYzMzEyMzAiLCJpYXQiOjE3NzAzMjE5NTcsImV4cCI6MTc3MDMyNTU1N30.4BUE8-eBbHubmSn1Ho5OhQjIcJuv5lxiCMQU2X7JsCA
+###

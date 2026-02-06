@@ -35,7 +35,7 @@ Required `.env` variables:
 - `PORT`: Server port (default: 5000)
 
 ## Installation & Setup
-1. Clone repository and install dependencies
+1. Clone repository and install dependencies using `npm install`
 2. Configure `.env` file with MongoDB and JWT credentials
 3. Run `node index.js` to start the server
 4. Test via VSCode HTTP client or Postman.
